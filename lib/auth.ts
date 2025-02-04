@@ -17,3 +17,5 @@ const authenticate = async (req: Request) => {
     return NextResponse.json({ message: "Invalid token" }, { status: 401 });
   }
 };
+
+export default authenticate;
