@@ -33,6 +33,8 @@ export const login = async (req: Request) => {
       SECRET_KEY,
       { expiresIn: "24h" }
     );
+
+    return NextResponse.json({ message: "Logged in", token }, { status: 200 });
   } catch (err) {
     return NextResponse.json({ message: "Error logging in." }, { status: 401 });
   }
